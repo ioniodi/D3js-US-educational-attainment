@@ -94,7 +94,7 @@ label{
   display: inline-block;
   background-color:  #fafad2;
   padding: 5px 15px;
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Muli";
   font-size: 20px;
   cursor: pointer;
 }
@@ -106,7 +106,7 @@ label{
 
 
 a, a:visited, a:hover {
-	text-decoration: none;
+	text-decoration: underline overline;
 }
 
 textarea, input {
