@@ -70,6 +70,44 @@ nav ul li a {
   color: #a9abae;
 }
 
+@media only screen and (max-width: 800px) {
+		#menu {
+			width:100%;
+			display: block;
+			background:#292f36;
+			font-size:1.35em;
+			text-align: center;
+			color:#fff;
+			
+		}
+		#nav.js {
+			display: none;
+
+		}
+		nav ul {
+			width:100%;
+			list-style:none;
+			background:#292f36;
+			position: fixed;
+	
+		}
+		nav ul li {
+			width:100%;
+			text-align: center;
+			color:#070a0f;
+
+		}
+		
+	}
+
+	@media only screen and (min-width:500px) {
+		#menu {
+			display: none;
+		}
+}
+
+
+
 body {
     font-size: 14px;
     font-family: "Muli", "Gill Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -102,6 +140,7 @@ label{
 
 .radio-toolbar input[type="radio"]:checked+label {
   background-color: #ff9999;
+  border-radius : 50%
 }
 
 
