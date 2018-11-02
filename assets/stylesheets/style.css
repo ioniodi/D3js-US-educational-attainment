@@ -92,15 +92,15 @@ label{
 .radio-toolbar label {
 
   display: inline-block;
-  background-color: #ddd;
-  padding: 4px 11px;
+  background-color: #b82e8a;
+  padding: 7px 19px; /*change padding from 4-11 to 7-19*/
   font-family: "Muli";
   font-size: 16px;
   cursor: pointer;
 }
 
 .radio-toolbar input[type="radio"]:checked+label {
-  background-color: #bbb;
+  background-color: #b82e8a;
 }
 
 
@@ -272,7 +272,7 @@ form {
 	  stroke-width: 3px;
 	}
 	.grandparent:hover rect {
-	  fill: #FF9B42;
+	  fill: #990000;
 	}
 	.children rect.parent,
 	.grandparent rect {
@@ -335,5 +335,5 @@ form {
 	    margin:0 0 4px !important;
 	    padding:0px;
 	    font-size:8px !important;
-        color: #0FA3B1;
+        color: #595959;
     }
