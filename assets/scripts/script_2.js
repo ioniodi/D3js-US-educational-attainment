@@ -276,7 +276,7 @@ d3.json("assets/data/us.json", function(data) {
         
     }
     
-    function speakNow(d) {
+    function speakText(d) {
         
         voice.text = name(d);
         speechSynthesis.speak(voice)
