@@ -50,6 +50,8 @@ var grandparent = svg.append("g")
         .attr("y", 10 - margin.top)
         .attr("dy", ".75em");
 
+var msg = new SpeechSynthesisUtterance();
+
 d3.json("assets/data/us.json", function(data) {
     var root = d3.hierarchy(data);
 
@@ -271,5 +273,12 @@ d3.json("assets/data/us.json", function(data) {
                 return i!== "";
             })
             .join(sep);
+    }
+    
+    function speakNow(selection) {
+        selection.on('mouseenter', function(data) {
+            msg.text = data.name;
+            speechSynthesis.speak(msg);
+        }
     }
 });
