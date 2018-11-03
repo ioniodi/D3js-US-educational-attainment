@@ -73,15 +73,18 @@ nav ul li a {
 body {
     font-size: 14px;
     font-family: "Muli", "Gill Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	voice-family: male;
 }
 
 text{
     font-family: "Muli", "Gill Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !IMPORTANT;
+	voice-family: male;
 }
 
 label{
   font-family: "Muli", "Gill Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !IMPORTANT;
      border-radius: 5px !IMPORTANT;
+	voice-family: male;
 }
 
 .radio-toolbar input[type="radio"] {
