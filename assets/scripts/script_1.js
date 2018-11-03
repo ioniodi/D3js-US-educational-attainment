@@ -107,7 +107,9 @@ function donutChart() {
                 });
                 
                 var msg = new SpeechSynthesisUtterance(label);
-                onmouseenter = speechSynthesis.speak(msg);
+                selection.on('mouseenter', function() {
+                        speechSynthesis.speak(msg);
+                }
             // ===========================================================================================
 
             // ===========================================================================================
