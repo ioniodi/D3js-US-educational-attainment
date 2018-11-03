@@ -24,6 +24,9 @@
 	-ms-box-sizing: border-box;
 }
 
+h1, h2, h3 {
+	voice-family: male;
+}
 
 header {
   height:36px;
