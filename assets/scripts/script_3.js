@@ -128,12 +128,9 @@ d3.tsv("assets/data/data.tsv", function(error, data) {
 
 	// animation
 	d3.selectAll("#stack-form input").on("change", handleFormClick);
-	d3.selectAll("#stack-form input").on("mouseenter", speakStack);
+	//d3.selectAll("#stack-form input").on("mouseenter", speakStack);
 	
-	function speakStack() {
-		var msg = new SpeechSynthesisUtterance(this.name);
-		speechSynthesis.speak(msg);
-	}
+	
 
 	function handleFormClick() {
 		if (this.value === "bypercent") {
@@ -193,5 +190,10 @@ d3.tsv("assets/data/data.tsv", function(error, data) {
 		stackedBarSVG.selectAll(".y.axis").call(yaxis);
 	}
 });
+
+function speakStack() {
+		var msg = new SpeechSynthesisUtterance(this.name);
+		speechSynthesis.speak(msg);
+}
 
 d3.select(self.frameElement).style("height", (height + margin.top + margin.bottom) + "px");
