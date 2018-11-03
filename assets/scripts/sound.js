@@ -3,8 +3,17 @@
 	<source src="assets/data/Error-sound.mp3" controls></source>
 </audio>
 
-var beepOne = $("#beep-one")[0];
-$("#nav-one a")
-	.mouseenter(function() {
-		beepOne.play();
-	});
+$("#nav-two a")
+  .each(function(i) {
+    if (i != 0) {
+      $("#beep-two")
+        .clone()
+        .attr("id", "beep-two" + i)
+        .appendTo($(this).parent());
+    }
+    $(this).data("beeper", i);
+  })
+  .mouseenter(function() {
+    $("#beep-two" + $(this).data("beeper"))[0].play();
+  });
+$("#beep-two").attr("id", "beep-two0");
