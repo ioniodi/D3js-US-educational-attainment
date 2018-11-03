@@ -104,7 +104,7 @@ d3.json("assets/data/us.json", function(data) {
             return d.children;
         })
             .classed("children", true)
-            .on("click", transition);
+            .on("click", transition)
             .on("mouseenter", speakNow);
         g.selectAll(".child")
             .data(function (d) {
