@@ -279,6 +279,6 @@ d3.json("assets/data/us.json", function(data) {
         selection.on('mouseenter', function(data) {
             msg.text = data.name;
             speechSynthesis.speak(msg);
-        }
+        })
     }
 });
