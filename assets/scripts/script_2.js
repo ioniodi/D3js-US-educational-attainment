@@ -82,6 +82,7 @@ d3.json("assets/data/us.json", function(data) {
         grandparent
             .datum(d.parent)
             .on("click", transition)
+            .on("mousenter", speakNow)
             .select("text")
             .text(name(d));
         // grandparent color
@@ -104,6 +105,7 @@ d3.json("assets/data/us.json", function(data) {
         })
             .classed("children", true)
             .on("click", transition);
+            .on("mouseenter", speakNow);
         g.selectAll(".child")
             .data(function (d) {
                 return d.children || [d];
@@ -171,11 +173,11 @@ d3.json("assets/data/us.json", function(data) {
                 this.remove();
                 transitioning = false;
             });
-            
-            t1.on("mouseenter", function(d) {
-                msg.text = data.name;
-                speechSynthesis.speak(msg);
-            });
+        }
+        
+        function speakNow(d) {
+            msg.text = d.name;
+            speechSynthesis.speak(msg);
         }
 
         document.forms[0].addEventListener("change", function() {
