@@ -171,6 +171,11 @@ d3.json("assets/data/us.json", function(data) {
                 this.remove();
                 transitioning = false;
             });
+            
+            t1.on("mouseenter", function(data) {
+                msg.text = data.name;
+                speechSynthesis.speak(msg);
+            });
         }
 
         document.forms[0].addEventListener("change", function() {
@@ -275,10 +280,5 @@ d3.json("assets/data/us.json", function(data) {
             .join(sep);
     }
     
-    function speakNow(selection) {
-        selection.on('mouseenter', function(data) {
-            msg.text = data.name;
-            speechSynthesis.speak(msg);
-        })
-    }
+   
 });
