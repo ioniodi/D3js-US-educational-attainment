@@ -128,6 +128,12 @@ d3.tsv("assets/data/data.tsv", function(error, data) {
 
 	// animation
 	d3.selectAll("#stack-form input").on("change", handleFormClick);
+	d3.selectAll("#stack-form input").on("mouseenter", speakStack);
+	
+	function speakStack() {
+		var msg = new SpeechSynthesisUtterance(this.name);
+		speechSynthesis.speak(msg);
+	}
 
 	function handleFormClick() {
 		if (this.value === "bypercent") {
