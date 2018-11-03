@@ -1,7 +1,7 @@
 // Javascript for playing a sound
 
 
-$("#nav-two a")
+$("#nav a")
   .each(function(i) {
     if (i != 0) {
       $("#beep-two")
