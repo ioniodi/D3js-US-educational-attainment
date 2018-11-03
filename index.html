@@ -83,9 +83,15 @@
    Should be equal the the height of the header
  */
 </script>
-<audio controls preload="auto">
-	<source src="assets/data/Error-sound.mp3" controls></source>
+<audio id="beep" controls>
+	<source src="assets/data/Error-sound.mp3" type="mp3"></source>
 </audio>
-<script src="assets/scripts/sound.js"></script>
+<script>
+	var beepOne = $("#beep")[0];
+	$("#nav a")
+	.mouseenter(function() {
+		beepOne.play();
+	});
+	       </script>
 </body>
 </html>
