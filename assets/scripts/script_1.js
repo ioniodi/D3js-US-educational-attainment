@@ -105,6 +105,9 @@ function donutChart() {
                     // if slice centre is on the left, anchor text to start, otherwise anchor to end
                     return (midAngle(d)) < Math.PI ? 'start' : 'end';
                 });
+                
+                var msg = new SpeechSynthesisUtterance(label);
+                onmouseenter = speechSynthesis.speak(msg);
             // ===========================================================================================
 
             // ===========================================================================================
