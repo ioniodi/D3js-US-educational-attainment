@@ -175,11 +175,7 @@ d3.json("assets/data/us.json", function(data) {
             });
         }
         
-        function speakNow(d) {
-            msg.text = name(d);
-            speechSynthesis.speak(msg);
-        }
-
+       
         document.forms[0].addEventListener("change", function() {
             treeSumSortType = document.forms[0].elements["treeSum"].value;
             treemap(root
@@ -282,5 +278,9 @@ d3.json("assets/data/us.json", function(data) {
             .join(sep);
     }
     
-   
+    function speakNow(d) {
+            msg.text = name(d);
+            speechSynthesis.speak(msg);
+    }
+
 });
