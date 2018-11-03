@@ -119,7 +119,7 @@ text{
 
 label{
   font-family: "Muli", "Gill Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !IMPORTANT;
-     border-radius: 5px !IMPORTANT;
+     border-radius: 15px !IMPORTANT;
 }
 
 .radio-toolbar input[type="radio"] {
@@ -132,9 +132,8 @@ label{
   display: inline-block;
   background-color: #ff9999;
   padding: 8px 20px; /*change padding from 4-11 to 7-19*/
-  font-family: "Arial";
+  font-family: "Muli";
   font-size: 16px;
-  border-radius: 50%
   border-style: solid;
   border-width: medium
   cursor: pointer;
