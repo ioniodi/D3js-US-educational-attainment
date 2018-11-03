@@ -106,10 +106,7 @@ function donutChart() {
                     return (midAngle(d)) < Math.PI ? 'start' : 'end';
                 });
                 
-                var msg = new SpeechSynthesisUtterance(label);
-                selection.on('mouseenter', function() {
-                        speechSynthesis.speak(msg);
-                }
+               
             // ===========================================================================================
 
             // ===========================================================================================
