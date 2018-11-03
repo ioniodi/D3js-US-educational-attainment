@@ -1,9 +1,5 @@
 // Javascript for playing a sound
 
-<audio controls preload="auto">
-	<source src="assets/data/Error-sound.mp3" controls></source>
-</audio>
-
 $("#nav a")
   .each(function(i) {
     if (i != 0) {
