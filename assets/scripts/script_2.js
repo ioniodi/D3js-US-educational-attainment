@@ -176,7 +176,7 @@ d3.json("assets/data/us.json", function(data) {
         }
         
         function speakNow(d) {
-            msg.text = d.name;
+            msg.text = name(d);
             speechSynthesis.speak(msg);
         }
 
