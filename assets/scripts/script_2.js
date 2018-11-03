@@ -172,7 +172,7 @@ d3.json("assets/data/us.json", function(data) {
                 transitioning = false;
             });
             
-            t1.on("mouseenter", function(data) {
+            t1.on("mouseenter", function(d) {
                 msg.text = data.name;
                 speechSynthesis.speak(msg);
             });
