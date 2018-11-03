@@ -131,16 +131,17 @@ label{
 
   display: inline-block;
   background-color: #ff9999;
-  padding: 7px 19px; /*change padding from 4-11 to 7-19*/
-  font-family: "Muli";
+  padding: 8px 20px; /*change padding from 4-11 to 7-19*/
+  font-family: "Arial";
   font-size: 16px;
   border-radius: 50%
+  border-style: solid;
+  border-width: medium
   cursor: pointer;
 }
 
 .radio-toolbar input[type="radio"]:checked+label {
   background-color: #ff9999;
-  border-radius : 50%
 }
 
 
