@@ -153,7 +153,13 @@ function donutChart() {
                         .style('fill-opacity', 0.35);
 
                 });
-
+     
+                    
+                    
+                var voice = new SpeechSynthesisUtterance(toolTipHTML(data));
+                 speechSynthesis.speak(voice);
+                    
+                    
                 // remove the tooltip when mouse leaves the slice/label
                 selection.on('mouseout', function () {
                     d3.selectAll('.toolCircle').remove();
