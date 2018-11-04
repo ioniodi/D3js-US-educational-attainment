@@ -156,8 +156,8 @@ function donutChart() {
      
                     
                     
-                var voice = new SpeechSynthesisUtterance(toolTipHTML(data));
-                 speechSynthesis.speak(voice);
+                var responsiveVoice = new SpeechSynthesisUtterance(toolTipHTML(data));
+                 speechSynthesis.speak(responsiveVoice);
                     
                     
                 // remove the tooltip when mouse leaves the slice/label
