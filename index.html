@@ -8,8 +8,7 @@
     <link href="assets/stylesheets/style.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <script type="text/javascript" src="assets/mouseover.js"></script>
-    <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+    
 	
 	
 	<script>
@@ -18,7 +17,13 @@
 	</script>
 	
 	<script>
-		var voice = new ResponsiveVoice();
+		var voice = new SpeechSynthesisUtterance();
+		var voices = window.speechSynthesis.getVoices();
+		voice.voice = voices.filter(function(voice) { return voice.name == 'Alex'; })[0];
+		voice.lang = 'en-UK';
+		voice.volume = 1;
+		voice.rate = 1;
+		voice.pitch = 1;
 	</script>
 	
 	
@@ -34,41 +39,41 @@
         </nav>
     </header>
 <body>
-         <h1 class="title" <h1 class="title" onmouseover="voice.text='Educational Attainment in the United State'; responsiveVoice.speak(voice);" onmouseleave="responsiveVoice.cancel();">Educational Attainment in the United States</h1>
+         <h1 class="title" <h1 class="title" onmouseover="voice.text='Educational Attainment in the United State'; speechSynthesis.speak(voice);" onmouseleave="speechSynthesis.cancel();">Educational Attainment in the United States</h1>
 	
 	<p><br></p>
-    <h2 class="subtitle"  onmouseover="voice.text='Nation-Wide Education Level of Population in Schooling'; responsiveVoice.speak(voice);" onmouseleave="responsiveVoice.cancel();">Nation-Wide Education Level of Population in Schooling</h2>
+    <h2 class="subtitle"  onmouseover="voice.text='Nation-Wide Education Level of Population in Schooling'; speechSynthesis.speak(voice);" onmouseleave="speechSynthesis.cancel();">Nation-Wide Education Level of Population in Schooling</h2>
 	
     <svg id="pie-chart" width="960" height="450"></svg><a name="regional"></a>
     <p><br><br><br></p>
 	       
-    <h2 class="subtitle" onmouseover="voice.text='Educational Attainment: Region-level Breakdown of University Students'; responsiveVoice.speak(voice);" onmouseleave="responsiveVoice.cancel();">Educational Attainment: Region-level Breakdown of University Students</h2
+    <h2 class="subtitle" onmouseover="voice.text='Educational Attainment: Region-level Breakdown of University Students'; speechSynthesis.speak(voice);" onmouseleave="speechSynthesis.cancel();">Educational Attainment: Region-level Breakdown of University Students</h2
 	
     <form id="tree-form">
         <div class="radio-toolbar">
             <input type="radio" id="mode1" name="treeSum" value="number" checked>
-            <label for="mode1"  onmouseover="voice.text='Pursuing a Masters degree (in number of students)';responsiveVoice.speak(voice);" onmouseleave="responsiveVoice.cancel();">Pursuing a Masters degree (in # of students)</label>
+            <label for="mode1"  onmouseover="voice.text='Pursuing a Masters degree (in number of students)';speechSynthesis.speak(voice);" onmouseleave="speechSynthesis.cancel();">Pursuing a Masters degree (in # of students)</label>
             <input type="radio" id="mode2" name="treeSum" value="percent">
-            <label for="mode2" onmouseover="voice.text='Pursuing a Masters degree (in percentage)';responsiveVoice.speak(voice);" onmouseleave="responsiveVoice.cancel();">Pursuing a Masters degree (in %)</label>
+            <label for="mode2" onmouseover="voice.text='Pursuing a Masters degree (in percentage)';speechSynthesis.speak(voice);" onmouseleave="speechSynthesis.cancel();">Pursuing a Masters degree (in %)</label>
             <input type="radio" id="mode3" name="treeSum" value="male">
-            <label for="mode3" onmouseover="voice.text='Males in College (18-24yrs)(in percentage)'; responsiveVoice.speak(voice);" onmouseleave="responsiveVoice.cancel();">Males in College (18-24yrs)(in %)</label>
+            <label for="mode3" onmouseover="voice.text='Males in College (18-24yrs)(in percentage)'; speechSynthesis.speak(voice);" onmouseleave="speechSynthesis.cancel();">Males in College (18-24yrs)(in %)</label>
             <input type="radio" id="mode4" name="treeSum" value="femal">
-            <label for="mode4"  onmouseover="voice.text='Females in College (18-24yrs) (in percentage)';  responsiveVoice.speak(voice);" onmouseleave="responsiveVoice.cancel();">Females in College (18-24yrs) (in %)</label>
+            <label for="mode4"  onmouseover="voice.text='Females in College (18-24yrs) (in percentage)';  speechSynthesis.speak(voice);" onmouseleave="speechSynthesis.cancel();">Females in College (18-24yrs) (in %)</label>
         </div>
     </form>
 	<p></p>
     <div id="chart"></div>
 	<a name="state"></a>
     <p><br><br></p>
-    <h2 class="subtitle" onmouseover="voice.text='Education Level of Population in Schooling: State-level Breakdown'; responsiveVoice.speak(voice);" onmouseleave="responsiveVoice.cancel();">Education Level of Population in Schooling: State-level Breakdown</h2>
+    <h2 class="subtitle" onmouseover="voice.text='Education Level of Population in Schooling: State-level Breakdown'; speechSynthesis.speak(voice);" onmouseleave="speechSynthesis.cancel();">Education Level of Population in Schooling: State-level Breakdown</h2>
   
-	
+	       
     <form id="stack-form">
         <div class="radio-toolbar">
             <input type="radio" id="radio1" name="mode" value="bypercent" checked>
-            <label for="radio1" onmouseover="voice.text='Students (in percentage)'; responsiveVoice.speak(voice);" onmouseleave="responsiveVoice.cancel();">Students (in %)</label>
+            <label for="radio1" onmouseover="voice.text='Students (in percentage)'; speechSynthesis.speak(voice);" onmouseleave="speechSynthesis.cancel();">Students (in %)</label>
             <input type="radio" id="radio2" name="mode" value="bycount">
-            <label for="radio2" onmouseover="voice.text='Students (in number of people)';  responsiveVoice.speak(voice);" onmouseleave="responsiveVoice.cancel();">Students (in number of people)</label>
+            <label for="radio2" onmouseover="voice.text='Students (in number of people)';  speechSynthesis.speak(voice);" onmouseleave="speechSynthesis.cancel();">Students (in number of people)</label>
     </div>
     </form>
     <div>
