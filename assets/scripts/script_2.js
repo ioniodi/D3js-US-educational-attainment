@@ -89,7 +89,7 @@ d3.json("assets/data/us.json", function(data) {
             .datum(d.parent)
             .select("rect")
             .attr("fill", function () {
-                return '#f7af72'
+                return '#225a25'
             });
         var g1 = svg.insert("g", ".grandparent")
             .datum(d)
@@ -100,7 +100,7 @@ d3.json("assets/data/us.json", function(data) {
             append("g");
         // add class and click handler to all g's with children
         g.filter(function (d) {
-            return d.children;
+            return '#6d875d';
         })
             .classed("children", true)
             .on("click", transition);
