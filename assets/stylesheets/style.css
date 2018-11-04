@@ -81,7 +81,7 @@ text{
 
 label{
   font-family: cursive !IMPORTANT;
-     border-radius: 10px !IMPORTANT;
+     border-radius: 15px !IMPORTANT;
 }
 
 .radio-toolbar input[type="radio"] {
@@ -100,7 +100,7 @@ label{
 }
 
 .radio-toolbar input[type="radio"]:checked+label {
-  background-color: #4e5684;
+  background-color: #607495;
 }
 
 
