@@ -81,7 +81,7 @@ text{
 
 label{
   font-family: cursive !IMPORTANT;
-     border-radius: 5px !IMPORTANT;
+     border-radius: 10px !IMPORTANT;
 }
 
 .radio-toolbar input[type="radio"] {
