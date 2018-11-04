@@ -185,6 +185,12 @@ d3.tsv("assets/data/data.tsv", function(error, data) {
 		yaxis.tickFormat(d3.format(".2s"));
 		stackedBarSVG.selectAll(".y.axis").call(yaxis);
 	}
+	
+	function speakVoice() {
+		
+		var voice = new SpeechSynthesisUtterance(this.name);
+	     speechSynthesis.speak(voice);
+}
 });
 
 d3.select(self.frameElement).style("height", (height + margin.top + margin.bottom) + "px");
