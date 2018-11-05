@@ -1,7 +1,7 @@
 # 1) λινκ στο αποθετήριο του κώδικα 
 https://github.com/p17kagk/D3js-US-educational-attainment
 # 2) λινκ στο κλαδί του κώδικα που αντιστοιχεί στο κάθε παραδοτέο 
-https://github.com/p17kagk/D3js-US-educational-attainment/tree/P2017203_%CE%A0%CE%B1%CF%81%CE%B1%CE%B4%CE%BF%CF%84%CE%AD%CE%BF%231-%CE%95%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1-%CE%91%CE%BD%CE%AC%CF%80%CF%84%CF%85%CE%BE%CE%B7%CF%82
+https://github.com/p17kagk/D3js-US-educational-attainment/tree/P2017203
 # 3) λινκ στο εκτελέσιμο
 https://p17kagk.github.io/D3js-US-educational-attainment/
 
