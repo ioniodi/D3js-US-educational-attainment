@@ -1,3 +1,15 @@
+## ΑΜ: 2017100
+
+## ΟΝΟΜΑΤΕΠΩΝΥΜΟ: ΣΤΑΝΙΤΣΑΣ ΙΩΑΝΝΗΣ-ΔΗΜΗΤΡΙΟΣ
+
+## link στο αποθετήριο: https://github.com/GiannisStan/D3js-US-educational-attainment/tree/master 
+
+## link στο κλαδί του κώδικα που αντιστοιχεί στο 'Α παραδοτέο: https://github.com/GiannisStan/D3js-US-educational-attainment/tree/2017100
+
+## link στο εκτελέσιμο: https://giannisstan.github.io/D3js-US-educational-attainment/
+
+
+
 # Οπτικοποίηση δεδομένων εκπαιδευτικού συστήματος (USA)
 
 ## Προετοιμασία
