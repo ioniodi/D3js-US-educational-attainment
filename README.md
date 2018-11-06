@@ -1,3 +1,13 @@
+## ΑΜ : 2017064
+
+## ΟΝΟΜΑΤΕΠΩΝΥΜΟ : ΜΑΡΙΟΣ ΓΟΥΤΙΔΗΣ
+
+## link ΑΠΟΘΕΤΗΡΙΟΥ : https://github.com/margout/D3js-US-educational-attainment
+
+## link ΚΛΑΔΙ ΤΟΥ ΚΩΔΙΚΑ ΠΟΥ ΑΝΤΙΣΤΟΙΧΕΙ ΣΤΟ ΠΑΡΑΔΟΤΕΟ : https://github.com/margout/D3js-US-educational-attainment/tree/2017064
+
+## link ΕΚΤΕΛΕΣΙΜΟΥ : https://margout.github.io/D3js-US-educational-attainment/
+
 # Οπτικοποίηση δεδομένων εκπαιδευτικού συστήματος (USA)
 
 ## Προετοιμασία
