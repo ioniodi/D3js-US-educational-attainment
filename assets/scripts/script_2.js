@@ -43,7 +43,7 @@ var grandparent = svg.append("g")
         .attr("y", -margin.top)
         .attr("width", width)
         .attr("height", margin.top)
-        .attr("fill", '#FF9B42');
+        .attr("fill", '#1a0700');
 
     grandparent.append("text")
         .attr("x", 10)
@@ -87,7 +87,7 @@ d3.json("assets/data/us.json", function(data) {
             .datum(d.parent)
             .select("rect")
             .attr("fill", function () {
-                return '#f7af72'
+                return '#ffece6'
             });
         var g1 = svg.insert("g", ".grandparent")
             .datum(d)
