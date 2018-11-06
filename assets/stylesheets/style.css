@@ -92,11 +92,11 @@ label{
 .radio-toolbar label {
 
   display: inline-block;
-  background-color: #ddd;
+  background-color: #787A7D;
   padding: 4px 11px;
-  font-family: "Muli";
-  font-size: 16px;
-  cursor: pointer;
+  font-family: "Times New Roman";
+  font-size: 24px;
+  cursor: not-allowed;
 }
 
 .radio-toolbar input[type="radio"]:checked+label {
