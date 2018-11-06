@@ -184,7 +184,7 @@ function donutChart() {
                 return tip;
             }
             // ===========================================================================================
-                 function createString(data) {
+         function createString(data) {
 
                 var tip = '',
                     j   = 0;
