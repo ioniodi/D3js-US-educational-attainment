@@ -1,3 +1,13 @@
+## Α.Μ: Π2017055
+
+## Ονοματεπώνυμο: Κακαρδάκος Αθανάσιος
+
+## 1) Λινκ στο αποθετήριο του κώδικα:https://github.com/p17kaka/D3js-US-educational-attainment/tree/master
+
+## 2) Λινκ στο κλαδί του κώδικα που αντιστοιχεί στο παραδοτέο: https://github.com/p17kaka/D3js-US-educational-attainment/tree/2017055
+
+## 3) Λινκ στο εκτελέσιμο:https://p17kaka.github.io/D3js-US-educational-attainment/
+
 # Οπτικοποίηση δεδομένων εκπαιδευτικού συστήματος (USA)
 
 ## Προετοιμασία
