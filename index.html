@@ -10,6 +10,16 @@
     <script type="text/javascript" src="sound-mouseover.js"></script>
      <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
 </head>
+	   <audio id="sound" src="Button-SoundBible.com-1420500901.wav"></audio>
+    <a onmouseover = "playSound();"></a>
+    <script>
+        function playSound() {
+          var sound = document.getElementById("sound");
+          sound.play();
+      }    
+	    
+	  </script>    
+	    
     </header>
  <ul>
       <li><a href="#top" onmouseover="playclip();">Top</a></li>
@@ -18,11 +28,11 @@
       <li><a href="#state" onmouseover="playclip();">State-Level</a></li>
     <ul>  	       
 <body>
-    <h1 class="title">Educational Attainment in the United States</h1>
+    <h1 class="title"onmouseover="responsiveVoice.speak('Educational Attainment in the United States','US English Male');" onmouseleave="responsiveVoice.cancel();">Educational Attainment in the United States</h1>
         
 	
 	<p><br></p>
-    <h2 class="subtitle">Nation-Wide Education Level of Population in Schooling</h2>
+   <h2 class="subtitle"onmouseover="responsiveVoice.speak('Nation-Wide Education Level of Population in Schooling','US English Female');" onmouseleave="responsiveVoice.cancel();">Nation-Wide Education Level of Population in Schooling</h2>
 	
     <svg id="pie-chart" width="960" height="450"></svg><a name="regional"></a>
     <p><br><br><br></p>
@@ -48,10 +58,10 @@
 	
     <form id="stack-form">
         <div class="radio-toolbar">
-            <input type="radio" id="radio1" name="mode" value="bypercent" checked>
-            <label for="radio1">Students (in %)</label>
+             <input type="radio" id="radio1" name="mode" value="bypercent" checked>
+            <label for="radio1" onmouseover="responsiveVoice.speak('Students (in %)','US English Male');" onmouseleave="responsiveVoice.cancel();">Students (in %)</label>
             <input type="radio" id="radio2" name="mode" value="bycount">
-            <label for="radio2">Students (in number of people)</label>
+            <label for="radio2" onmouseover="responsiveVoice.speak('Students (in number of people)','US English Male');" onmouseleave="responsiveVoice.cancel();">Students (in number of people)</label>
     </div>
     </form>
     <div>
