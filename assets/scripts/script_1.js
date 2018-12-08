@@ -4,7 +4,7 @@
 var donut = donutChart()
         .width(960)
         .height(450)
-        .cornerRadius(.min=0 .max=10 .step=0.01) // sets how rounded the corners are on each slice
+        .cornerRadius(2) // sets how rounded the corners are on each slice
         .padAngle(0.005) // effectively dictates the gap between slice
         .variable('Percent')
         .category('Education Level');
