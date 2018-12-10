@@ -9,10 +9,13 @@ var donut = donutChart()
         .category('Education Level');
 
  d3.tsv('assets/data/species.tsv', function(error, data) {
-        if (error) throw error;
-        d3.select('#pie-chart')
-            .datum(data) // bind data to the div
-            .call(donut); // draw chart in div
+         var pie = donutChart() 
+                 .width(960)
+                 .height(450)
+                 .cornerRadius(0.00)
+                 .padAngle(0.000)
+                 .variable('Percent')
+                 .category('Education Level');
     });
   
 
