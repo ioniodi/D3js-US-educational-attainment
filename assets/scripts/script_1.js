@@ -10,10 +10,10 @@ var donut = donutChart()
 
  d3.tsv('assets/data/species.tsv', function(error, data) {
         if (error) throw error;
-        var cornerRadius = 0.00;
         d3.select('#pie-chart')
             .datum(data) // bind data to the div
-            .call(donut); // draw chart in div
+            .call(donut) // draw chart in div
+            .cornerRadius(0.00);
     });
   
 
