@@ -12,7 +12,8 @@ var donut = donutChart()
         if (error) throw error;
         d3.select('#pie-chart')
             .datum(data) // bind data to the div
-            .call(donut); // draw chart in div
+            .call(donut) // draw chart in div
+            .innerRadius(radius * 0.0);
             
           
             
@@ -50,7 +51,7 @@ function donutChart() {
             // radius will dictate the thickness of the donut
             var arc = d3.arc()
                 .outerRadius(radius * 0.8)
-                .innerRadius(radius * 0.0)
+                .innerRadius(radius * 0.6)
                 .cornerRadius(cornerRadius)
                 .padAngle(padAngle);
 
