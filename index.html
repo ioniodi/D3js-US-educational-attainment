@@ -31,11 +31,13 @@
   <label><input type="radio" name="dataset" value="count"> Count</label>
 	</form>
     <svg id="pie-chart" width="960" height="450"></svg><a name="regional"></a>
+	d3.tsv("species.tsv", type, function(error, data){
 	var pie = d3.layout.pie()
     		.value(function(d) { return d.percent; })
     		.sort(null);
+	}
 	function type(d) {
-		  d.apples = +d.apples;
+		  d.percent = +d.percent;
 		  d.oranges = +d.oranges;
 		  return d;
 		}
