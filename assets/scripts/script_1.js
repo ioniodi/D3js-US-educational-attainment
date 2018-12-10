@@ -9,13 +9,6 @@ var donut = donutChart()
         .variable('Percent')
         .category('Education Level');
   
-d3.tsv('assets/data/species.tsv', function(error, data) {
-        if (error) throw error;
-        d3.select('#pie-chart')
-            .datum(data) // bind data to the div
-            .call(donut); // draw chart in div
-    });
-
 
 function donutChart() {
     var width,
@@ -132,7 +125,7 @@ function donutChart() {
 
             // ===========================================================================================
             d3.tsv("species.tsv", type, function(error, data){
-                   var donut = donutChart()
+                   var donut = pieChart()
                         .width(960)
                         .height(450)
                         .cornerRadius(0) // sets how rounded the corners are on each slice
@@ -141,7 +134,7 @@ function donutChart() {
                         .category('Education Level');
 
  
-        function donutChart() {
+        function pieChart() {
             var width,
                 height,
                 margin = {top: 10, right: 10, bottom: 10, left: 10},
