@@ -16,7 +16,7 @@ var donut = donutChart()
                  .padAngle(0.000)
                  .variable('Percent')
                  .category('Education Level');
-    });
+    }
   
 
 function donutChart() {
