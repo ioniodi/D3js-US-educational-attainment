@@ -13,7 +13,8 @@ var donut = donutChart()
         d3.select('#pie-chart')
             .datum(data) // bind data to the div
             .call(donut) // draw chart in div
-            .cornerRadius(0.00 , change());
+            .radius(0.00);
+            
     });
   
 
@@ -131,9 +132,6 @@ function donutChart() {
             // ===========================================================================================
 
             // Functions
-                  function change() {
-                         var value = this.value;
-                  }
 
             // calculates the angle for the middle of a slice
             function midAngle(d) { return d.startAngle + (d.endAngle - d.startAngle) / 2; }
