@@ -12,7 +12,8 @@ var donut = donutChart()
         if (error) throw error;
         d3.select('#pie-chart')
             .datum(data) // bind data to the div
-            .call(donut); // draw chart in div
+            .call(donut) // draw chart in div
+            .innerRadius(0.00);
           
             
     });
