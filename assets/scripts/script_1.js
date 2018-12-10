@@ -113,7 +113,7 @@
             // add tooltip to mouse events on slices and labels
             d3.selectAll('.labelName text, .slices path').call(toolTip);
             // ===========================================================================================
-                 d3.tsv("data.tsv", type, function(error, data){
+                 d3.tsv("species.tsv", type, function(error, data){
             var width = 960,
                 height = 450,
                 margin = {top: 10, right: 10, bottom: 10, left: 10},
