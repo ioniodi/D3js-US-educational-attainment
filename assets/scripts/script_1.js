@@ -5,7 +5,6 @@ var donut = donutChart()
         .height(450)
         .cornerRadius(0.02) // sets how rounded the corners are on each slice
         .padAngle(0.005) // effectively dictates the gap between slice
-        .innerRadius(0.00)
         .variable('Percent')
         .category('Education Level');
 
@@ -40,7 +39,7 @@ function donutChart() {
 
             // ===========================================================================================
             // Set up constructors for making donut. See https://github.com/d3/d3-shape/blob/master/README.md
-            var radius = Math.min(width, height) / 2;
+            var radius = 0;
 
             // creates a new pie generator
             var pie = d3.pie()
