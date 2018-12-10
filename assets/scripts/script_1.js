@@ -13,7 +13,7 @@
         floatFormat = d3.format('.4r'),
         cornerRadius = 0.02, // sets how rounded the corners are on each slice
         percentFormat = d3.format(',.1%');
-     d3.tsv("species.tsv", type, function(error, data){
+     d3.tsv('assets/data/species.tsv', type, function(error, data){
             var width = 960,
                 height = 450,
                 margin = {top: 10, right: 10, bottom: 10, left: 10},
