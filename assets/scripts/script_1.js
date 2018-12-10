@@ -1,27 +1,24 @@
 // Script 1
 // Data Visualization III - Pie Chart
 
-var donut = donutChart()
-        .width(960)
-        .height(450)
-        .cornerRadius(0.02) // sets how rounded the corners are on each slice
-        .padAngle(0.005) // effectively dictates the gap between slice
-        .variable('Percent')
-        .category('Education Level');
+
   
 
 function donutChart() {
-    var width,
-        height,
+    var  
+        width(960),
+        height(450),
+        cornerRadius(0.02), // sets how rounded the corners are on each slice
+        padAngle(0.005), // effectively dictates the gap between slice
+        variable('Percent'),
+        category('Education Level'),
         margin = {top: 10, right: 10, bottom: 10, left: 10},
         colour = d3.scaleOrdinal() .range(["#d8bfd8", "#dda0dd", "#7b6888", "#6b486b", "#a05d56", "#ffdab9", "#ffa07a"]),
     //.range(["#ef9999", "#e8b9ae", "#d8cdb3", "#90afa2", "#6f94a3", "#607495", "#4e5684"]),
     // .range(["#0FA3B1", "#73c3bf", "#a1d8c8", "#cbe0a7", "#f2db84", "#f7af72", "#FF9B42"]), // colour scheme
-        variable, // value in data that will dictate proportions on chart
-        category, // compare data by
-        padAngle, // effectively dictates the gap between slices
+        
         floatFormat = d3.format('.4r'),
-        cornerRadius, // sets how rounded the corners are on each slice
+       
         percentFormat = d3.format(',.1%');
 
     function chart(selection){
