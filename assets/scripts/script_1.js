@@ -8,18 +8,6 @@ var donut = donutChart()
         .variable('Percent')
         .category('Education Level');
 
-d3.tsv('assets/data/species.tsv', function(error, data) {
-        if (error) throw error;
-        d3.select('#pie-chart')
-            .datum(data) // bind data to the div
-            .call(donut)
-            .innerRadius( radius * 0.0);
-
-         
-    });
-
-  
-
 function donutChart() {
     var width,
         height,
@@ -132,6 +120,18 @@ function donutChart() {
             // add tooltip to mouse events on slices and labels
             d3.selectAll('.labelName text, .slices path').call(toolTip);
             // ===========================================================================================
+    d3.tsv('assets/data/species.tsv', function(error, data) {
+        if (error) throw error;
+        d3.select('#pie-chart')
+            .datum(data) // bind data to the div
+            .call(donut)
+            .innerRadius( radius * 0.00);
+           
+
+         
+    });
+
+  
 
             // Functions
                  
