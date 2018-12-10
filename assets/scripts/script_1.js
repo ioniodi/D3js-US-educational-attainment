@@ -6,12 +6,12 @@
 
 function donutChart() {
     var  
-        width(960),
-        height(450),
-        cornerRadius(0.02), // sets how rounded the corners are on each slice
-        padAngle(0.005), // effectively dictates the gap between slice
-        variable('Percent'),
-        category('Education Level'),
+        width=960,
+        height=450,
+        cornerRadius=0.02, // sets how rounded the corners are on each slice
+        padAngle=0.005, // effectively dictates the gap between slice
+        variable='Percent',
+        category='Education Level',
         margin = {top: 10, right: 10, bottom: 10, left: 10},
         colour = d3.scaleOrdinal() .range(["#d8bfd8", "#dda0dd", "#7b6888", "#6b486b", "#a05d56", "#ffdab9", "#ffa07a"]),
     //.range(["#ef9999", "#e8b9ae", "#d8cdb3", "#90afa2", "#6f94a3", "#607495", "#4e5684"]),
