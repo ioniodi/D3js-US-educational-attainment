@@ -13,7 +13,7 @@ var donut = donutChart()
         d3.select('#pie-chart')
             .datum(data) // bind data to the div
             .call(donut) // draw chart in div
-            .radius(0.00 , "change")
+            .radius(0.00 , change);
             
     });
   
