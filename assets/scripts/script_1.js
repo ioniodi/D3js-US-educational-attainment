@@ -39,7 +39,7 @@ function donutChart() {
 
             // ===========================================================================================
             // Set up constructors for making donut. See https://github.com/d3/d3-shape/blob/master/README.md
-            var radius = 0;
+            var radius = Math.min(width, height) / 2;
 
             // creates a new pie generator
             var pie = d3.pie()
@@ -50,7 +50,7 @@ function donutChart() {
             // radius will dictate the thickness of the donut
             var arc = d3.arc()
                 .outerRadius(radius * 0.8)
-                .innerRadius(radius * 0.6)
+                .innerRadius(radius * 0.0)
                 .cornerRadius(cornerRadius)
                 .padAngle(padAngle);
 
