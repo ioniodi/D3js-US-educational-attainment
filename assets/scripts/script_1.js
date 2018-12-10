@@ -12,24 +12,8 @@ d3.tsv('assets/data/species.tsv', function(error, data) {
         if (error) throw error;
         d3.select('#pie-chart')
             .datum(data) // bind data to the div
- 
-            var width,
-                height,
-                margin = {top: 10, right: 10, bottom: 10, left: 10},
-                colour = d3.scaleOrdinal() .range(["#d8bfd8", "#dda0dd", "#7b6888", "#6b486b", "#a05d56", "#ffdab9", "#ffa07a"]),
-            //.range(["#ef9999", "#e8b9ae", "#d8cdb3", "#90afa2", "#6f94a3", "#607495", "#4e5684"]),
-            // .range(["#0FA3B1", "#73c3bf", "#a1d8c8", "#cbe0a7", "#f2db84", "#f7af72", "#FF9B42"]), // colour scheme
-                variable, // value in data that will dictate proportions on chart
-                category, // compare data by
-                padAngle, // effectively dictates the gap between slices
-                floatFormat = d3.format('.4r'),
-                cornerRadius, // sets how rounded the corners are on each slice
-                percentFormat = d3.format(',.1%');
-         var arc = d3.arc()
-                .outerRadius(radius * 0.8)
-                .innerRadius(radius * 0.0)
-                .cornerRadius(cornerRadius)
-                .padAngle(padAngle);
+            .call(donut)
+            .innerRadius( radius * 0.0);
 
          
     });
