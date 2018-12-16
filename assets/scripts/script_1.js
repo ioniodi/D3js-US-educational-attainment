@@ -3,11 +3,6 @@ $(document).ready(function () {
 
   var bubbleChart = new d3.svg.BubbleChart({
     
-      min-width(100px);
-      max-width(700px);
-      height(700px);
-      margin(0 auto);
-    
  
     supportResponsive: true,
     //container: => use @default
