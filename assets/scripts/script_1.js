@@ -1,5 +1,5 @@
 
-   
+  $(document).ready(function () {
   var bubbleChart = new d3.svg.BubbleChart({
     
  
@@ -95,5 +95,7 @@
           ]
         }
       }]
-  });
+ 
+     });
+   });
 
