@@ -35,7 +35,6 @@ function donutChart() {
 
   
 
-<script>
 var data = [{"age":"Below 6 years","population":511},
             {"age":"6 yrs & Above – Below 12 yrs","population":394},
             {"age":"12 yrs & Above –Below 16 yrs","population":429},
@@ -117,6 +116,6 @@ var g = svg.selectAll(".arc")
 		    	   
 		
 */
-</script>
+
 
 }
