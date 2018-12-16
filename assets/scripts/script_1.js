@@ -1,4 +1,11 @@
 $(document).ready(function () {
+  var margin = {0 auto},
+    min-width = 100px,
+    max-width = 700px,
+    height = 700px ,
+    formatNumber = d3.format(","),
+    transitioning;
+
   var bubbleChart = new d3.svg.BubbleChart({
     supportResponsive: true,
     //container: => use @default
