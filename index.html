@@ -26,7 +26,8 @@
 	
 	<p><br></p>
     <h2 class="subtitle" onmouseover="responsiveVoice.speak('Nation-Wide Education Level of Population in Schooling','US English Female');" onmouseleave="responsiveVoice.cancel();">Nation-Wide Education Level of Population in Schooling</h2>
-	  .tooltip{
+	 <div>
+	.tooltip{
 position: absolute;	
   text-align: center;	
   width: 13%;	
@@ -105,6 +106,7 @@ var g = svg.selectAll(".arc")
 		.attr("d",arc)
 		.style("fill",function(d){return color(d.data.age);})
 		 .attr("d", arc);
+	 </div>
 
 
 
