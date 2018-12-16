@@ -1,5 +1,5 @@
 
-   
+   var el_id = 'bubbleChart';
 
   var bubbleChart = new d3.svg.BubbleChart({
     
