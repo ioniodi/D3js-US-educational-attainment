@@ -29,6 +29,9 @@
 	<!DOCTYPE html>
 
   
+   <!DOCTYPE html>
+<html>
+  <head>
     <meta charset="utf-8">
     <title>No. Of Victims</title>
 	<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script> 
@@ -48,11 +51,12 @@ position: absolute;
   opacity:0;	
 
 }
-
-
+</style>
+<body>
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <div id = "svgContent"></div>
-	  </style>
+
+<script>
 var data = [{"age":"Below 6 years","population":511},
             {"age":"6 yrs & Above – Below 12 yrs","population":394},
             {"age":"12 yrs & Above –Below 16 yrs","population":429},
@@ -112,8 +116,33 @@ var g = svg.selectAll(".arc")
 		.attr("d",arc)
 		.style("fill",function(d){return color(d.data.age);})
 		 .attr("d", arc);;
+/*
+		            svg.selectAll("text").data(pie(data)).enter()
+		             .append("text")
+		             .attr("class","label1")
+		             .attr("transform", function(d) {
+		      		   var dist=radius+15;
+		    		   var winkel=(d.startAngle+d.endAngle)/2;
+		    		   var x=dist*Math.sin(winkel)-4;
+		    		   var y=-dist*Math.cos(winkel)-4;
+		    		   
+		    		   return "translate(" + x + "," + y + ")";
+		            })
+		            .attr("dy", "0.35em")
+		            .attr("text-anchor", "middle")
+		            
+		    	    .text(function(d){
+		    	      return d.value;
+		    	    });
+		    	    
+		    	   
+		
+*/
+</script>
 
 
+</body>
+</html>
 
 	<form> 		
   <label><input type="radio" name="Chartset" value="percent" checked> Donut Chart</label>
