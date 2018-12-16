@@ -26,7 +26,12 @@
 	
 	<p><br></p>
     <h2 class="subtitle" onmouseover="responsiveVoice.speak('Nation-Wide Education Level of Population in Schooling','US English Female');" onmouseleave="responsiveVoice.cancel();">Nation-Wide Education Level of Population in Schooling</h2>
-	 <h2
+	 <head>
+    <meta charset="utf-8">
+    <title>No. Of Victims</title>
+	<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script> 
+    <link rel="stylesheet" href="normalize.css">
+    <style>
 	.tooltip{
 position: absolute;	
   text-align: center;	
@@ -41,11 +46,12 @@ position: absolute;
   opacity:0;	
 
 }
-
-
+</style>
+<body>
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <div id = "svgContent"></div>
 
+<script>
 
 var data = [{"age":"Below 6 years","population":511},
             {"age":"6 yrs & Above – Below 12 yrs","population":394},
@@ -106,7 +112,10 @@ var g = svg.selectAll(".arc")
 		.attr("d",arc)
 		.style("fill",function(d){return color(d.data.age);})
 		 .attr("d", arc);;
-	</h2>
+	</script>
+
+
+</body>
 
 
 
