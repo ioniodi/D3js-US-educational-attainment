@@ -44,8 +44,6 @@ var data = [{"age":"Below 6 years","population":511},
             {"age":"45 yrs & Above – Below 60 yrs","population":5225},
             {"age":"60 yrs & Above","population":1116}];
 var margin = {top:40,left:40,right:40,bottom:40};
-width = 300;
-height = 300;
 radius = Math.min(width-100,height-100)/2;
 var color = d3.scale.category10();
 var arc = d3.svg.arc()  
