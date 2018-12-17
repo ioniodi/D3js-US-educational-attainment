@@ -23,7 +23,7 @@
 <body>
   <h1 class="title" onmouseover="responsiveVoice.speak('Educational Attainment in the United States','US English Female');" onmouseleave="responsiveVoice.cancel();">Educational Attainment in the United States</h1>
         
-	<div class="hide" id="national">
+	<div class="hide" id="ntl">
 	<p><br></p>
     <h2 class="subtitle" onmouseover="responsiveVoice.speak('Nation-Wide Education Level of Population in Schooling','US English Female');" onmouseleave="responsiveVoice.cancel();">Nation-Wide Education Level of Population in Schooling</h2>
 	
@@ -35,7 +35,7 @@
     <svg id="pie-chart" width="960" height="450"></svg><a name="regional"></a>
 		</div>
 	
-	<div class="hide" id="regional">
+	<div class="hide" id="rgl">
 	<p><br><br><br></p>
     <h2 class="subtitle" onmouseover="responsiveVoice.speak('Educational Attainment: Region-level Breakdown of University Students','US English Female');" onmouseleave="responsiveVoice.cancel();">Educational Attainment: Region-level Breakdown of University Students</h2>
     <form id="tree-form">
@@ -54,7 +54,7 @@
 	<p></p>
     <div id="chart"></div>
          </div>
-	<div class="hide" id="statelevel">
+	<div class="hide" id="ste">
 
 	<a name="state"></a>
     <p><br><br></p>
@@ -109,8 +109,8 @@
           }
 	return false;
 	}
-document.getElementById("regional").style.display = "none";
-document.getElementById("statelevel").style.display = "none";
+document.getElementById("rgl").style.display = "none";
+document.getElementById("stel").style.display = "none";
 	
 /* scrollTop() >= 240
    Should be equal the the height of the header
