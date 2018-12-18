@@ -3,7 +3,7 @@
 var donut = donutChart()
         .width(960)
         .height(450)
-        .cornerRadius(20) // sets how rounded the corners are on each slice
+        .cornerRadius(30) // sets how rounded the corners are on each slice
         .padAngle(0.000) // effectively dictates the gap between slice
         .variable('Percent')
         .category('Education Level');
@@ -49,8 +49,8 @@ function donutChart() {
             // contructs and arc generator. This will be used for the donut. The difference between outer and inner
             // radius will dictate the thickness of the donut
             var arc = d3.arc()
-                .outerRadius(radius * 0.8)
-                .innerRadius(radius * 0.0)
+                .outerRadius(radius - 250)
+                .innerRadius(radius - 50)
                 .cornerRadius(cornerRadius)
                 .padAngle(padAngle);
 
