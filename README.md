@@ -2,7 +2,7 @@
 
 ## Τρικοίλη Μαρία
 ## ΑΜ Π2015037
-<br>
+
 ### Link προσωπικόυ αποθετήριου κώδικα: https://github.com/Mariatrik/D3js-US-educational-attainment
 ### Link εκτελέσιμου κώδικα: https://mariatrik.github.io/D3js-US-educational-attainment/ <br>
 
