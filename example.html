@@ -7,16 +7,20 @@
     <title>Examples</title>
     <link href="assets/stylesheets/style.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">4
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel='stylesheet' href='https://cdn.rawgit.com/novus/nvd3/v1.8.1/build/nv.d3.css'>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,600,200italic,600italic&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 
 </head>
   <header>
        <nav>
     <ul>
 	
-   	<li><a href="#exm1" onclick="showhide('ntl');" onmouseover="playclip();" >Example 1</a></li>
-   	<li><a href="#exm2" onclick="showhide('rgl');" onmouseover="playclip();" >Example 2</a></li>
-   	<li><a href="#exm3" onclick="showhide('stl');" onmouseover="playclip();" >Example 3</a></li>
+   	<li><a href="#exm1" onmouseover="playclip();" >Example 1</a></li>
+   	<li><a href="#exm2" onmouseover="playclip();" >Example 2</a></li>
+   	<li><a href="#exm3" onmouseover="playclip();" >Example 3</a></li>
 	
     <ul>
         </nav>
@@ -25,8 +29,8 @@
 <body>
     <h1 class="title" onmouseover="responsiveVoice.speak('More examples','US English Female');" onmouseleave="responsiveVoice.cancel();">More examples</h1>
  
-	<div class="hide" id="exm1">
-		<a name="exm1"></a>
+	
+		
 	<p><br></p>
     <h2 class="subtitle" onmouseover="responsiveVoice.speak('Young people living with their parents','US English Female');" onmouseleave="responsiveVoice.cancel();">Young people living with their parents</h2>
 	
@@ -34,7 +38,7 @@
 	
    <div class="bubbleChart"/>
 		<a name="exm2"></a>
-	</div>
+	
 	
 	
 	
@@ -74,20 +78,7 @@
         }
     });
 });
-		 function showhide(id){
-        if (document.getElementById) {
-          var divid = document.getElementById(id);
-          var divs = document.getElementsByClassName("hide");
-          for(var i=0;i<divs.length;i++) {
-            divs[i].style.display = "none";
-          }
-          divid.style.display = "block";
-        } 
-        return false;
- }
-document.getElementById("rgl").style.display = "none";
-document.getElementById("stl").style.display = "none";
-
+	
   
   </script>
 <audio>
