@@ -20,7 +20,7 @@ treeJSON = d3.json("assets/data/us.json", function(error, treeData) {
     var viewerWidth = $(document).width();
     var viewerHeight = $(document).height();
 
-    var tree = d3.layout.newtree()
+    var tree = d3.layout.tree()
         .size([viewerHeight, viewerWidth]);
 
     // define a d3 diagonal projection for use by the node paths later on.
