@@ -49,7 +49,7 @@ function donutChart() {
             // contructs and arc generator. This will be used for the donut. The difference between outer and inner
             // radius will dictate the thickness of the donut
             var arc = d3.arc()
-                .outerRadius(radius - 270)
+                .outerRadius(radius - 500)
                 .innerRadius(radius * 0.0)
                 .cornerRadius(cornerRadius)
                 .padAngle(padAngle);
