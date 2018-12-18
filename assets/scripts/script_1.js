@@ -56,7 +56,7 @@ function donutChart() {
 
             // this arc is used for aligning the text labels
             var outerArc = d3.arc()
-                .outerRadius(radius + 50)
+                .outerRadius(radius * 0.09)
                 .innerRadius(radius * 0.0);
             // ===========================================================================================
 
