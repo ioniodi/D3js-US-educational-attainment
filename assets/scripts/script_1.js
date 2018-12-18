@@ -8,13 +8,13 @@ var donut = donutChart()
         .variable('Percent')
         .category('Education Level');
 
-    d3.tsv('assets/data/species.tsv', function(error, data) {
+    d3.tsv('assets/data/example1.tsv', function(error, data) {
         if (error) throw error;
         d3.select('#pie-chart')
             .datum(data) // bind data to the div
             .call(donut);
            
-
+return donut;
          
     });
 
