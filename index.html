@@ -5,76 +5,97 @@
     <meta charset="UTF-8">
     <title>Educational Attainment in the United States</title>
     <link href="assets/stylesheets/style.css" rel="stylesheet"/>
+    <link href="assets/stylesheets/my_style.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <style type="text/css">
+        .bar { fill: steelblue; }
+    </style>
 </head>
   <header>
        <nav>
     <ul>
-      <li><a href="#top" >Top</a></li>
-      <li><a href="#national">National</a></li>
-      <li><a href="#regional">Regional</a></li>
-      <li><a href="#state">State-Level</a></li>
+      <!-- <li><a href="#top" >Top</a></li> -->
+      <li><button onclick="show_chart_1()">National</button></li>
+      <li><button onclick="show_chart_2()">Regional</button></li>
+      <li><button onclick="show_chart_3()">State-Level</button></li>
     <ul>
         </nav>
     </header>
 <body>
     <h1 class="title">Educational Attainment in the United States</h1>
-        
-	
-	<p><br></p>
-    <h2 class="subtitle">Nation-Wide Education Level of Population in Schooling</h2>
-	
-    <svg id="pie-chart" width="960" height="450"></svg><a name="regional"></a>
-    <p><br><br><br></p>
-    <h2 class="subtitle">Educational Attainment: Region-level Breakdown of University Students</h2>
-	
-    <form id="tree-form">
-        <div class="radio-toolbar">
-            <input type="radio" id="mode1" name="treeSum" value="number" checked>
-            <label for="mode1">Pursuing a Masters degree (in # of students)</label>
-            <input type="radio" id="mode2" name="treeSum" value="percent">
-            <label for="mode2">Pursuing a Masters degree (in %)</label>
-            <input type="radio" id="mode3" name="treeSum" value="male">
-            <label for="mode3">Males in College (18-24yrs)(in %)</label>
-            <input type="radio" id="mode4" name="treeSum" value="femal">
-            <label for="mode4">Females in College (18-24yrs) (in %)</label>
-        </div>
-    </form>
-	<p></p>
-    <div id="chart"></div>
-	<a name="state"></a>
-    <p><br><br></p>
-    <h2 class="subtitle">Education Level of Population in Schooling: State-level Breakdown</h2>
-	
-    <form id="stack-form">
-        <div class="radio-toolbar">
-            <input type="radio" id="radio1" name="mode" value="bypercent" checked>
-            <label for="radio1">Students (in %)</label>
-            <input type="radio" id="radio2" name="mode" value="bycount">
-            <label for="radio2">Students (in number of people)</label>
+    <div id="chart1" class="show">
+            
+    	<p><br></p>
+        <h2 class="subtitle">Nation-Wide Education Level of Population in Schooling</h2>
+    	
+        <svg id="pie-chart" width="960" height="450"></svg>
     </div>
-    </form>
-    <div>
-        <svg id="stacked-bar-chart"></svg>
+    <div id="chart2" class="show">
+        <a name="regional"></a>
+        <p><br><br><br></p>
+        <h2 class="subtitle">Educational Attainment: Region-level Breakdown of University Students</h2>
+    	
+        <form id="tree-form">
+            <div class="radio-toolbar">
+                <input type="radio" id="mode1" name="treeSum" value="number" checked>
+                <label for="mode1">Pursuing a Masters degree (in # of students)</label>
+                <input type="radio" id="mode2" name="treeSum" value="percent">
+                <label for="mode2">Pursuing a Masters degree (in %)</label>
+                <input type="radio" id="mode3" name="treeSum" value="male">
+                <label for="mode3">Males in College (18-24yrs)(in %)</label>
+                <input type="radio" id="mode4" name="treeSum" value="femal">
+                <label for="mode4">Females in College (18-24yrs) (in %)</label>
+            </div>
+        </form>
+    	<p></p>
+        <div id="chart"></div>
+    </div>
+	<div id="chart3" class="show">
+        <p><br></p>
+        <h2 class="subtitle">Education Level of Population in Schooling: State-level Breakdown</h2>
+    	
+        <form id="stack-form">
+            <div class="radio-toolbar">
+                <input type="radio" id="radio1" name="mode" value="bypercent" checked>
+                <label for="radio1">Students (in %)</label>
+                <input type="radio" id="radio2" name="mode" value="bycount">
+                <label for="radio2">Students (in number of people)</label>
+        </div>
+        </form>
+        <div id="legend_bar">
+            
+        </div>
+        <div id="stacked-bar-chart">
+            <!-- <svg id="stacked-bar-chart"></svg> -->
+        </div>
     </div>
 
     
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src="assets/scripts/script_1.js"></script>
-<script src="assets/scripts/script_2.js"></script>
-<script src="assets/scripts/script_3.js"></script>
+<!-- <script src="assets/scripts/script_1.js"></script> -->
+<!-- <script src="assets/scripts/script_2.js"></script> -->
+<!-- <script src="assets/scripts/script_3.js"></script> -->
+<script src="assets/scripts/my_script.js"></script>
+<script src="assets/scripts/new_graph1.js"></script>
+<script src="assets/scripts/new_graph2.js"></script>
+<script src="assets/scripts/new_graph3.js"></script>
 <script>
     $( document ).ready(function() {
-      $(window).scroll(function(){
-        if ($(window).scrollTop() >= 300) {
-           $('nav').addClass('fixed-header');
+        $(window).scroll(function(){
+            if ($(window).scrollTop() >= 300) {
+                $('nav').addClass('fixed-header');
+            }
+            else {
+                $('nav').removeClass('fixed-header');
+            }
         }
-        else {
-           $('nav').removeClass('fixed-header');
+    );
+    $( document ).ready(function() {
+            show_chart_1();
         }
-    });
+    );
 });
 
 /* scrollTop() >= 240
