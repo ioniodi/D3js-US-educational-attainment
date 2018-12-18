@@ -5,9 +5,9 @@ var obj = document.getElementById(el_id);
 
 var divWidth = obj.offsetWidth;
 
-var margin = {top: 30, right: 0, bottom: 20, left: 0},
-    width = divWidth,
-    height = 500 - margin.top - margin.bottom,
+var margin = {top: 10, right: 10, bottom: 10, left: 10},
+    width = 800,
+    height = 400 ,
     formatNumber = d3.format(","),
     transitioning;
 
