@@ -6,4 +6,4 @@
 4.	Πρόσθεσα στο αρχείο index.html την γραμμή <link href="assets/stylesheets/my_style.css" rel="stylesheet"/> η οποία καλεί το νέο css αρχείο που έφτιαξα καθώς επίσης και την γραμμή <script src="assets/scripts/my_script.js"></script> έτσι ώστε να μπορώ να χρησιμοποιήσω τις νέες συναρτήσεις που όρισα.
 5.	Πρόσθεσα 3 νέα αρχεία, τα new_graph1.js, new_graph2.js και new_graph3.js στον φάκελο assets/scripts και κάλεσα αυτά τα τρία αρχεία στο τέλος του index.html. Αυτά τα τρία αρχεία αποτελούν και τα 3 νέα γραφήματα που ζητήθηκαν.
 
-## Link στον κώδικα του παραδοτέου: https://github.com/p15gkar/D3js-US-educational-attainment/edit/2015075/
+## Link στον κώδικα του παραδοτέου: https://github.com/p15gkar/D3js-US-educational-attainment/tree/2015075
