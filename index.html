@@ -14,15 +14,15 @@
        <nav>
     <ul>
 	
-   	<li><a href="#national" onclick="showhide('nationwide');" onmouseover="playclip();" >National</a></li>
-   	<li><a href="#regional" onclick="showhide('regionlevel');" onmouseover="playclip();" >Regional</a></li>
-   	<li><a href="#state" onclick="showhide('statelevel');" onmouseover="playclip();" >State-Level</a></li>
+   	<li><a href="#national" onclick="showhide('ntl');" onmouseover="playclip();" >National</a></li>
+   	<li><a href="#regional" onclick="showhide('rgl');" onmouseover="playclip();" >Regional</a></li>
+   	<li><a href="#state" onclick="showhide('stl');" onmouseover="playclip();" >State-Level</a></li>
     <ul>
         </nav>
     </header>
 <body>
   <h1 class="title" onmouseover="responsiveVoice.speak('Educational Attainment in the United States','US English Female');" onmouseleave="responsiveVoice.cancel();">Educational Attainment in the United States</h1>
-        <div class="hide" id="nationwide">
+        <div class="hide" id="ntl">
 	
 	<p><br></p>
     <h2 class="subtitle" onmouseover="responsiveVoice.speak('Nation-Wide Education Level of Population in Schooling','US English Female');" onmouseleave="responsiveVoice.cancel();">Nation-Wide Education Level of Population in Schooling</h2>
@@ -32,10 +32,10 @@
   <label><input type="radio" name="Chartset" value="percent"> Pie Chart</label>
 	</form>
 	
-    <svg id="pie-chart" width="960" height="450"></svg><a name="regionlevel"></a>
+    <svg id="pie-chart" width="960" height="450"></svg><a name="rgl"></a>
 	</div>
 		
-		<div class="hide" id="regionlevel">
+		<div class="hide" id="rgl">
 		<p><br><br><br></p>
 		
     <h2 class="subtitle" onmouseover="responsiveVoice.speak('Educational Attainment: Region-level Breakdown of University Students','US English Female');" onmouseleave="responsiveVoice.cancel();">Educational Attainment: Region-level Breakdown of University Students</h2>
@@ -55,7 +55,7 @@
 	<p></p>
     <div id="chart"></div>
 	</div>
-	<div class="hide" id="statelevel">
+	<div class="hide" id="stl">
 	<a name="state"></a>
     <p><br><br></p>
      <h2 class="subtitle" onmouseover="responsiveVoice.speak('Education Level of Population in Schooling: State-level Breakdown','US English Female');" onmouseleave="responsiveVoice.cancel();">Education Level of Population in Schooling: State-level Breakdown</h2>
@@ -109,8 +109,8 @@
         } 
         return false;
  }
-document.getElementById("regionlevel").style.display = "none";
-document.getElementById("statelevel").style.display = "none";
+document.getElementById("rgl").style.display = "none";
+document.getElementById("stl").style.display = "none";
 
 
 /* scrollTop() >= 240
