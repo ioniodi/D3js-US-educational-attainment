@@ -1,4 +1,4 @@
-$(document).ready(function () {
+
   var bubbleChart = new d3.svg.BubbleChart({
     supportResponsive: true,
     //container: => use @default
@@ -87,5 +87,5 @@ $(document).ready(function () {
         }
       }]
   });
-});
-LICE
+
+
