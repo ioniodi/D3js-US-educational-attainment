@@ -21,7 +21,7 @@ function drawMultSeries() {
       ]);
 
       var options = {
-        title: 'Population of Largest U.S. Cities',
+        title: 'Απογραφή πληθυσμού περιφερειών Ελλαδας 2011',
         chartArea: {width: '50%'},
         hAxis: {
           title: 'Total Population',
