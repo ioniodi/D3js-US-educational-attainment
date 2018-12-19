@@ -24,42 +24,9 @@
 	
 	<p><br></p>
 	
-  <head>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-      google.charts.load("current", {packages:["corechart"]});
-      google.charts.setOnLoadCallback(drawChart);
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-			['ΠΕΡΙΦΕΡΕΙΑ', 'ΣΥΝΟΛΟ ΠΛΗΘΥΣΜΟΥ'],
-			['ΠΕΡΙΦΕΡΕΙΑ ΑΝΑΤΟΛΙΚΗΣ ΜΑΚΕΔΟΝΙΑΣ ΚΑΙ ΘΡΑΚΗΣ (Έδρα: Κομοτηνή,η)', 602.167],
-			['ΠΕΡΙΦΕΡΕΙΑ ΚΕΝΤΡΙΚΗΣ ΜΑΚΕΔΟΝΙΑΣ (Έδρα: Θεσσαλονίκη,η)', 1.863.708],
-			['ΠΕΡΙΦΕΡΕΙΑ ΔΥΤΙΚΗΣ ΜΑΚΕΔΟΝΙΑΣ (Έδρα: Κοζάνη,η)', 281.097],
-			['ΠΕΡΙΦΕΡΕΙΑ ΗΠΕΙΡΟΥ (Έδρα: Ιωάννινα,τα)', 333.818],
-			['ΠΕΡΙΦΕΡΕΙΑ ΘΕΣΣΑΛΙΑΣ (Έδρα: Λάρισα,η)', 725.755],
-			['ΠΕΡΙΦΕΡΕΙΑ ΣΤΕΡΕΑΣ ΕΛΛΑΔΑΣ (Έδρα: Λαμία,η)', 542.661],
-			['ΠΕΡΙΦΕΡΕΙΑ ΙΟΝΙΩΝ ΝΗΣΩΝ (Έδρα: Κέρκυρα,η)', 205.958],
-			['ΠΕΡΙΦΕΡΕΙΑ ΔΥΤΙΚΗΣ ΕΛΛΑΔΑΣ (Έδρα: Πάτραι,αι)', 673.510],
-			['ΠΕΡΙΦΕΡΕΙΑ ΠΕΛΟΠΟΝΝΗΣΟΥ (Έδρα: Τρίπολις,η)', 572.825],
-			['ΠΕΡΙΦΕΡΕΙΑ ΑΤΤΙΚΗΣ (Έδρα: Αθήναι,αι)', 3.791.778],
-			['ΠΕΡΙΦΕΡΕΙΑ ΒΟΡΕΙΟΥ ΑΙΓΑΙΟΥ (Έδρα: Μυτιλήνη,η)', 197.390],
-			['ΠΕΡΙΦΕΡΕΙΑ ΝΟΤΙΟΥ ΑΙΓΑΙΟΥ (Έδρα: Ερμούπολις,η)', 305.730],
-			['ΠΕΡΙΦΕΡΕΙΑ ΚΡΗΤΗΣ (Έδρα: Ηράκλειον,το)', 616.012]
-        ]);
-
-        var options = {
-          title: 'My Daily Activities',
-          pieHole: 0.4,
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
-        chart.draw(data, options);
-      }
-    </script>
-  </head>
-  <body>
-    <div id="donutchart" style="width: 900px; height: 500px;"></div>
-  </body>
+    <script type="text/javascript" src="https://assets/scripts/example1.js"></script>
+  <div id="chart_div"></div>
+      
     <p><br><br><br></p>
   
 
