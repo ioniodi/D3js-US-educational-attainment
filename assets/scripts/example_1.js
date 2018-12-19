@@ -24,7 +24,7 @@ function drawAxisTickColors() {
 
       var options = {
      
-        chartArea: {width: '50%'},
+        barchartArea: {width: '50%'},
         hAxis: {
           title: 'Μόνιμος πληθυσμός περιφερειών Ελλάδος 2011',
           minValue: 0,
