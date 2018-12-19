@@ -26,31 +26,33 @@
     <h2 class="subtitle">Self-employed persons by number and importance of clients in the last 12 months, 2017 </h2>
 	<h4 class="subtitle">(in % of self-employed people) </h4>
 	
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
-      google.charts.load('current', {'packages':['corechart']});
+      google.charts.load("current", {packages:["corechart"]});
       google.charts.setOnLoadCallback(drawChart);
-
       function drawChart() {
-
         var data = google.visualization.arrayToDataTable([
-          ['Total', 'Count'],
-          ['Men', 61.778   ]
-          ['Women',  59.405  ],
-	]);
+          ['Task', 'Hours per Day'],
+          ['Work',     11],
+          ['Eat',      2],
+          ['Commute',  2],
+          ['Watch TV', 2],
+          ['Sleep',    7]
+        ]);
 
         var options = {
-          title: 'My Daily Activities'
+          title: 'My Daily Activities',
+          is3D: true,
         };
 
-        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
         chart.draw(data, options);
       }
     </script>
   </head>
   <body>
-    <div id="piechart" style="width: 900px; height: 500px;"></div>
+    <div id="piechart_3d" style="width: 900px; height: 500px;"></div>
   </body>
     <p><br><br><br></p>
   
