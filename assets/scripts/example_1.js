@@ -1,37 +1,58 @@
 
- google.charts.load('current', {packages: ['corechart', 'bar']});
-google.charts.setOnLoadCallback(drawMultSeries);
+google.charts.load('current', {packages: ['corechart', 'bar']});
+google.charts.setOnLoadCallback(drawAxisTickColors);
 
-function drawMultSeries() {
+function drawAxisTickColors() {
       var data = google.visualization.arrayToDataTable([
-     ['ΠΕΡΙΦΕΡΕΙΑ', 'ΣΥΝΟΛΟ ΠΛΗΘΥΣΜΟΥ'],
-    ['ΠΕΡΙΦΕΡΕΙΑ ΑΝΑΤΟΛΙΚΗΣ ΜΑΚΕΔΟΝΙΑΣ ΚΑΙ ΘΡΑΚΗΣ (Έδρα: Κομοτηνή,η)',602167],
-    ['ΠΕΡΙΦΕΡΕΙΑ ΚΕΝΤΡΙΚΗΣ ΜΑΚΕΔΟΝΙΑΣ (Έδρα: Θεσσαλονίκη,η)', 1863708],
-    ['ΠΕΡΙΦΕΡΕΙΑ ΔΥΤΙΚΗΣ ΜΑΚΕΔΟΝΙΑΣ (Έδρα: Κοζάνη,η)', 281097],
-    ['ΠΕΡΙΦΕΡΕΙΑ ΗΠΕΙΡΟΥ (Έδρα: Ιωάννινα,τα)', 333818],
-    ['ΠΕΡΙΦΕΡΕΙΑ ΘΕΣΣΑΛΙΑΣ (Έδρα: Λάρισα,η)', 725755],
-    ['ΠΕΡΙΦΕΡΕΙΑ ΣΤΕΡΕΑΣ ΕΛΛΑΔΑΣ (Έδρα: Λαμία,η)', 542661],
-    ['ΠΕΡΙΦΕΡΕΙΑ ΙΟΝΙΩΝ ΝΗΣΩΝ (Έδρα: Κέρκυρα,η)', 205958],
-    ['ΠΕΡΙΦΕΡΕΙΑ ΔΥΤΙΚΗΣ ΕΛΛΑΔΑΣ (Έδρα: Πάτραι,αι)', 673510],
-    ['ΠΕΡΙΦΕΡΕΙΑ ΠΕΛΟΠΟΝΝΗΣΟΥ (Έδρα: Τρίπολις,η)', 572825],
-    ['ΠΕΡΙΦΕΡΕΙΑ ΑΤΤΙΚΗΣ (Έδρα: Αθήναι,αι)', 3791778],
-    ['ΠΕΡΙΦΕΡΕΙΑ ΒΟΡΕΙΟΥ ΑΙΓΑΙΟΥ ', 197390],
-    ['ΠΕΡΙΦΕΡΕΙΑ ΝΟΤΙΟΥ ΑΙΓΑΙΟΥ ', 305730],
-    ['ΠΕΡΙΦΕΡΕΙΑ ΚΡΗΤΗΣ ', 616012]
+        ['ΠΕΡΙΦΕΡΕΙΑ', 'ΣΥΝΟΛΟ ΠΛΗΘΥΣΜΟΥ'],
+        ['ΠΕΡΙΦΕΡΕΙΑ ΑΝΑΤΟΛΙΚΗΣ ΜΑΚΕΔΟΝΙΑΣ ΚΑΙ ΘΡΑΚΗΣ', 602167],
+        ['ΠΕΡΙΦΕΡΕΙΑ ΚΕΝΤΡΙΚΗΣ ΜΑΚΕΔΟΝΙΑΣ ', 1863708],
+        ['ΠΕΡΙΦΕΡΕΙΑ ΔΥΤΙΚΗΣ ΜΑΚΕΔΟΝΙΑΣ', 281097],
+        ['ΠΕΡΙΦΕΡΕΙΑ ΗΠΕΙΡΟΥ', 333818],
+        ['ΠΕΡΙΦΕΡΕΙΑ ΘΕΣΣΑΛΙΑΣ', 725755],
+        ['ΠΕΡΙΦΕΡΕΙΑ ΣΤΕΡΕΑΣ ΕΛΛΑΔΑΣ', 542661],
+        ['ΠΕΡΙΦΕΡΕΙΑ ΙΟΝΙΩΝ ΝΗΣΩΝ', 205958],
+        ['ΠΕΡΙΦΕΡΕΙΑ ΔΥΤΙΚΗΣ ΕΛΛΑΔΑΣ', 673510],
+        ['ΠΕΡΙΦΕΡΕΙΑ ΠΕΛΟΠΟΝΝΗΣΟΥ', 572825],
+        ['ΠΕΡΙΦΕΡΕΙΑ ΑΤΤΙΚΗΣ', 3791778],
+        ['ΠΕΡΙΦΕΡΕΙΑ ΒΟΡΕΙΟΥ ΑΙΓΑΙΟΥ', 197390],
+        ['ΠΕΡΙΦΕΡΕΙΑ ΝΟΤΙΟΥ ΑΙΓΑΙΟΥ', 305730],
+        ['ΠΕΡΙΦΕΡΕΙΑ ΚΡΗΤΗΣ', 616012]
+
+
       ]);
 
       var options = {
-        title: 'Population of Largest U.S. Cities',
+     
         chartArea: {width: '50%'},
         hAxis: {
-          title: 'Total Population',
-          minValue: 0
+          title: 'Μόνιμος πληθυσμός περιφερειών Ελλάδος 2011',
+          minValue: 0,
+          textStyle: {
+            bold: true,
+            fontSize: 12,
+            color: '#4d4d4d'
+          },
+          titleTextStyle: {
+            bold: true,
+            fontSize: 18,
+            color: '#4d4d4d'
+          }
         },
         vAxis: {
-          title: 'City'
+          title: 'Περιφέρειες',
+          textStyle: {
+            fontSize: 14,
+            bold: true,
+            color: '#848484'
+          },
+          titleTextStyle: {
+            fontSize: 14,
+            bold: true,
+            color: '#848484'
+          }
         }
       };
-
-      var chart = new google.visualization.BarChart(document.getElementById('barchart'));
+      var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
       chart.draw(data, options);
     }
