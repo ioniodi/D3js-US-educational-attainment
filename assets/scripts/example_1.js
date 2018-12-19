@@ -33,5 +33,5 @@ function drawMultSeries() {
       };
 
       var chart = new google.visualization.BarChart(document.getElementById('barchart'));
-      barchart.draw(data, options);
+      chart.draw(data, options);
     }
