@@ -32,6 +32,6 @@ function drawMultSeries() {
         }
       };
 
-      var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+      var chart = new google.visualization.BarChart(document.getElementById('chart'));
       chart.draw(data, options);
     }
