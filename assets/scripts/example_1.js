@@ -53,6 +53,6 @@ function drawAxisTickColors() {
           }
         }
       };
-      var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+      var chart = new google.visualization.BarChart(document.getElementById('barchart_div'));
       chart.draw(data, options);
     }
