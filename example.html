@@ -7,7 +7,15 @@
     <link href="assets/stylesheets/style.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script type="text/javascript" src="assets/scripts/sound-mouseover.js"></script>
 </head>
+	<header>
+       <nav>
+    <ul>
+	<li><a href="index.html"  onmouseover="playclip();">More</a></li>
+    <ul>
+        </nav>
+    </header>
   
 <body>
     <h1 class="title">More Examples</h1>
@@ -186,6 +194,12 @@ function drawAxisTickColors() {
    Should be equal the the height of the header
  */
 </script>
+
+	<audio>
+		<source src="assets/sounds/click.mp3">
+		<source src="assets/sounds/click.ogg">
+	</audio>
+<div id="sounddiv"><bgsound id="sound"></div>
 
 </body>
 </html> 
