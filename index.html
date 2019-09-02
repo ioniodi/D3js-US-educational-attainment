@@ -94,13 +94,13 @@
         }
         });
        
-        // textNodesUnder(document.body).forEach(element => {
-        //     if(!isBlank(element.nodeValue)){
-        //         element.parentElement.addEventListener("mouseover", ()=>{
-        //             responsiveVoice.speak(element.nodeValue);
-        //         });                
-        //     }                
-        // });
+        textNodesUnder(document.body).forEach(element => {
+            if(!isBlank(element.nodeValue)){
+                element.parentElement.addEventListener("mouseover", ()=>{
+                    responsiveVoice.speak(element.nodeValue);
+                });                
+            }                
+        });
     });
     function isBlank(str) {
       return (!str || /^\s*$/.test(str));
