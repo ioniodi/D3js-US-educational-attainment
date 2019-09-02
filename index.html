@@ -9,57 +9,66 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 </head>
-  <header>
-       <nav>
-    <ul class="nav-but">
-      <li><a onmouseover="mousOver()" href="#top">Top</a></li>
-      <li><a onmouseover="mousOver()" href="#national">National</a></li>
-      <li><a onmouseover="mousOver()" href="#regional">Regional</a></li>
-      <li><a onmouseover="mousOver()" href="#state">State-Level</a></li>
-    <ul>
-        </nav>
-    </header>
+<div class="row">
+    <div class="col-md-12">
+            <header>
+                <nav class="navbar navbar-fixed-top">
+                    <ul class="nav-but">
+                    <li class="nav-item"><a class="nav-link" onmouseover="mousOver()" href="#top">Top</a></li>
+                    <li class="nav-item"><a class="nav-link" onmouseover="mousOver()" href="#national">National</a></li>
+                    <li class="nav-item"><a class="nav-link" onmouseover="mousOver()" href="#regional">Regional</a></li>
+                    <li class="nav-item"><a class="nav-link" onmouseover="mousOver()" href="#state">State-Level</a></li>
+                    <ul>
+                </nav>
+            </header>
+    </div>    
+</div>
+
 <body>
-    <h1 class="title">Educational Attainment in the United States</h1>
-        
-	
-	<p><br></p>
-    <h2 class="subtitle">Nation-Wide Education Level of Population in Schooling</h2>
-	
-    <svg id="pie-chart" width="960" height="450"></svg><a name="regional"></a>
-    <p><br><br><br></p>
-    <h2 class="subtitle">Educational Attainment: Region-level Breakdown of University Students</h2>
-	
-    <form id="tree-form">
-        <div class="radio-toolbar">
-            <input type="radio" id="mode1" name="treeSum" value="number" checked>
-            <label for="mode1">Pursuing a Masters degree (in # of students)</label>
-            <input type="radio" id="mode2" name="treeSum" value="percent">
-            <label for="mode2">Pursuing a Masters degree (in %)</label>
-            <input type="radio" id="mode3" name="treeSum" value="male">
-            <label for="mode3">Males in College (18-24yrs)(in %)</label>
-            <input type="radio" id="mode4" name="treeSum" value="femal">
-            <label for="mode4">Females in College (18-24yrs) (in %)</label>
-        </div>
-    </form>
-	<p></p>
-    <div id="chart"></div>
-	<a name="state"></a>
-    <p><br><br></p>
-    <h2 class="subtitle">Education Level of Population in Schooling: State-level Breakdown</h2>
-	
-    <form id="stack-form">
-        <div class="radio-toolbar">
-            <input type="radio" id="radio1" name="mode" value="bypercent" checked>
-            <label for="radio1">Students (in %)</label>
-            <input type="radio" id="radio2" name="mode" value="bycount">
-            <label for="radio2">Students (in number of people)</label>
-    </div>
-    </form>
-    <div>
-        <svg id="stacked-bar-chart"></svg>
-    </div>
+
+<div class="row">
+    <div class="col-12">
+        <h1 class="title">Educational Attainment in the United States</h1>
     
+
+        <p><br></p>
+        <h2 class="subtitle">Nation-Wide Education Level of Population in Schooling</h2>
+        
+        <svg id="pie-chart" width="960" height="450"></svg><a name="regional"></a>
+        <p><br><br><br></p>
+        <h2 class="subtitle">Educational Attainment: Region-level Breakdown of University Students</h2>
+        
+        <form id="tree-form">
+            <div class="radio-toolbar">
+                <input type="radio" id="mode1" name="treeSum" value="number" checked>
+                <label for="mode1">Pursuing a Masters degree (in # of students)</label>
+                <input type="radio" id="mode2" name="treeSum" value="percent">
+                <label for="mode2">Pursuing a Masters degree (in %)</label>
+                <input type="radio" id="mode3" name="treeSum" value="male">
+                <label for="mode3">Males in College (18-24yrs)(in %)</label>
+                <input type="radio" id="mode4" name="treeSum" value="femal">
+                <label for="mode4">Females in College (18-24yrs) (in %)</label>
+            </div>
+        </form>
+        <p></p>
+        <div id="chart"></div>
+        <a name="state"></a>
+        <p><br><br></p>
+        <h2 class="subtitle">Education Level of Population in Schooling: State-level Breakdown</h2>
+        
+        <form id="stack-form">
+            <div class="radio-toolbar">
+                <input type="radio" id="radio1" name="mode" value="bypercent" checked>
+                <label for="radio1">Students (in %)</label>
+                <input type="radio" id="radio2" name="mode" value="bycount">
+                <label for="radio2">Students (in number of people)</label>
+        </div>
+        </form>
+        <div>
+            <svg id="stacked-bar-chart"></svg>
+        </div>
+    </div>    
+</div>
     <audio>
         <source src="./assets/sound/click.wav"></source>
     </audio>
@@ -97,8 +106,15 @@
    Should be equal the the height of the header
  */
  function mousOver(){
-    var audio = document.getElementsByTagName("audio")[0];
-    audio.play();
+     var audio = document.getElementsByTagName("audio")[0];
+    if(!audio.paused){
+        audio.currentTime = 0;
+        audio.play();   
+    }
+    else{
+        audio.play();
+        audio.currentTime = 0;   
+    }
  } 
  function textNodesUnder(el){
     var n, a=[], walk=document.createTreeWalker(el,NodeFilter.SHOW_TEXT,null,false);
