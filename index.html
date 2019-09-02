@@ -84,6 +84,8 @@
 <script src="assets/scripts/script_2.js"></script>
 <script src="assets/scripts/script_3.js"></script>
 <script>
+
+
     $(document).ready(function() {
       $(window).scroll(function(){
         if ($(window).scrollTop() >= 300) {
@@ -94,15 +96,7 @@
         }
         });    
     });
-    window.onload = function() {
-        textNodesUnder(document.body).forEach(element => {
-            if(!isBlank(element.nodeValue)){
-                element.parentElement.addEventListener("mouseover", ()=>{
-                    responsiveVoice.speak(element.nodeValue);
-                });                
-            }                
-        });
-    };
+
 
     function isBlank(str) {
       return (!str || /^\s*$/.test(str));
@@ -121,11 +115,6 @@
         audio.currentTime = 0;   
     }
  } 
- function textNodesUnder(el){
-    var n, a=[], walk=document.createTreeWalker(el,NodeFilter.SHOW_TEXT,null,false);
-    while(n=walk.nextNode()) a.push(n);
-    return a;
-}
 
 function national(){
     document.getElementById("pie").style.display = "block";

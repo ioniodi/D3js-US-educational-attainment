@@ -1,6 +1,19 @@
 // Script 1
 // Data Visualization III - Pie Chart
-
+window.onload = function() {
+    textNodesUnder(document.body).forEach(element => {
+        if(!isBlank(element.nodeValue)){
+            element.parentElement.addEventListener("mouseover", ()=>{
+                responsiveVoice.speak(element.nodeValue);
+            });                
+        }                
+    });
+};
+function textNodesUnder(el){
+    var n, a=[], walk=document.createTreeWalker(el,NodeFilter.SHOW_TEXT,null,false);
+    while(n=walk.nextNode()) a.push(n);
+    return a;
+}
 var donut = donutChart()
         .width(960)
         .height(450)
@@ -168,7 +181,6 @@ function donutChart() {
                     i   = 0;
 
                 for (var key in data.data) {
-                    console.log(key, data.data);
                     // if value is a number, format it as a percentage
                     var value = key == "Percent" ? percentFormat(data.data[key]) : data.data[key];
 
