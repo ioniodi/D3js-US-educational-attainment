@@ -11,11 +11,11 @@
 </head>
   <header>
        <nav>
-    <ul>
-      <li><a class="nav-but" href="#top" >Top</a></li>
-      <li><a class="nav-but" href="#national">National</a></li>
-      <li><a class="nav-but" href="#regional">Regional</a></li>
-      <li><a class="nav-but" href="#state">State-Level</a></li>
+    <ul class="nav-but">
+      <li><a onmouseover="mousOver()" href="#top">Top</a></li>
+      <li><a onmouseover="mousOver()" href="#national">National</a></li>
+      <li><a onmouseover="mousOver()" href="#regional">Regional</a></li>
+      <li><a onmouseover="mousOver()" href="#state">State-Level</a></li>
     <ul>
         </nav>
     </header>
@@ -70,7 +70,7 @@
 <script src="assets/scripts/script_2.js"></script>
 <script src="assets/scripts/script_3.js"></script>
 <script>
-    $( document ).ready(function() {
+    $(document).ready(function() {
       $(window).scroll(function(){
         if ($(window).scrollTop() >= 300) {
            $('nav').addClass('fixed-header');
@@ -78,16 +78,16 @@
         else {
            $('nav').removeClass('fixed-header');
         }
+        });
     });
-});
 
 /* scrollTop() >= 240
    Should be equal the the height of the header
  */
- var audio = document.getElementsByTagName("audio")[0];
- $(".nav-but").mouseenter(()=>{
+ function mousOver(){
+    var audio = document.getElementsByTagName("audio")[0];
     audio.play();
- });
+ } 
 </script>
 
 </body>
