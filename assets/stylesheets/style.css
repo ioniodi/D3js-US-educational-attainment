@@ -190,7 +190,6 @@ polyline{
 #pie-chart {
     display: block;
     margin: 0 auto;
-    width: 100%;
 }
 
 #treemap {
@@ -201,7 +200,6 @@ polyline{
 #stacked-bar-chart {
     display: block;
     margin: 0 auto;
-    width: 100%;
 }
 
 .paragraph {
