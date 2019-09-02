@@ -14,10 +14,9 @@
             <header>
                 <nav class="navbar navbar-fixed-top">
                     <ul class="nav-but">
-                    <li class="nav-item"><a class="nav-link" onmouseover="mousOver()" href="#top">Top</a></li>
-                    <li class="nav-item"><a class="nav-link" onmouseover="mousOver()" href="#national">National</a></li>
-                    <li class="nav-item"><a class="nav-link" onmouseover="mousOver()" href="#regional">Regional</a></li>
-                    <li class="nav-item"><a class="nav-link" onmouseover="mousOver()" href="#state">State-Level</a></li>
+                        <li class="nav-item"><a class="nav-link" onmouseover="mousOver()" onclick="national()" href="#national">National</a></li>
+                        <li class="nav-item"><a class="nav-link" onmouseover="mousOver()" onclick="regional()" href="#regional">Regional</a></li>
+                        <li class="nav-item"><a class="nav-link" onmouseover="mousOver()" onclick="state()" href="#state">State-Level</a></li>
                     <ul>
                 </nav>
             </header>
@@ -28,45 +27,50 @@
 
 <div class="row">
     <div class="col-12">
-        <h1 class="title">Educational Attainment in the United States</h1>
-    
 
-        <p><br></p>
-        <h2 class="subtitle">Nation-Wide Education Level of Population in Schooling</h2>
-        
-        <svg id="pie-chart" width="960" height="450"></svg><a name="regional"></a>
-        <p><br><br><br></p>
-        <h2 class="subtitle">Educational Attainment: Region-level Breakdown of University Students</h2>
-        
-        <form id="tree-form">
-            <div class="radio-toolbar">
-                <input type="radio" id="mode1" name="treeSum" value="number" checked>
-                <label for="mode1">Pursuing a Masters degree (in # of students)</label>
-                <input type="radio" id="mode2" name="treeSum" value="percent">
-                <label for="mode2">Pursuing a Masters degree (in %)</label>
-                <input type="radio" id="mode3" name="treeSum" value="male">
-                <label for="mode3">Males in College (18-24yrs)(in %)</label>
-                <input type="radio" id="mode4" name="treeSum" value="femal">
-                <label for="mode4">Females in College (18-24yrs) (in %)</label>
+        <div id="pie">
+            <h1 class="title">Educational Attainment in the United States</h1>
+            <p><br></p>
+            <h2 class="subtitle">Nation-Wide Education Level of Population in Schooling</h2>            
+            <svg id="pie-chart" width="960" height="450"></svg><a name="regional"></a>
+        </div>
+
+        <div id="regional">
+            <h2 class="subtitle">Educational Attainment: Region-level Breakdown of University Students</h2>
+    
+            <form id="tree-form">
+                <div class="radio-toolbar">
+                    <input type="radio" id="mode1" name="treeSum" value="number" checked>
+                    <label for="mode1">Pursuing a Masters degree (in # of students)</label>
+                    <input type="radio" id="mode2" name="treeSum" value="percent">
+                    <label for="mode2">Pursuing a Masters degree (in %)</label>
+                    <input type="radio" id="mode3" name="treeSum" value="male">
+                    <label for="mode3">Males in College (18-24yrs)(in %)</label>
+                    <input type="radio" id="mode4" name="treeSum" value="femal">
+                    <label for="mode4">Females in College (18-24yrs) (in %)</label>
+                </div>
+            </form>
+            <p></p>
+            <div id="chart"></div>
+            <a name="state"></a>
+        </div>
+
+        <div id="diagram">
+            <h2 class="subtitle">Education Level of Population in Schooling: State-level Breakdown</h2>
+            
+            <form id="stack-form">
+                <div class="radio-toolbar">
+                    <input type="radio" id="radio1" name="mode" value="bypercent" checked>
+                    <label for="radio1">Students (in %)</label>
+                    <input type="radio" id="radio2" name="mode" value="bycount">
+                    <label for="radio2">Students (in number of people)</label>
             </div>
-        </form>
-        <p></p>
-        <div id="chart"></div>
-        <a name="state"></a>
-        <p><br><br></p>
-        <h2 class="subtitle">Education Level of Population in Schooling: State-level Breakdown</h2>
-        
-        <form id="stack-form">
-            <div class="radio-toolbar">
-                <input type="radio" id="radio1" name="mode" value="bypercent" checked>
-                <label for="radio1">Students (in %)</label>
-                <input type="radio" id="radio2" name="mode" value="bycount">
-                <label for="radio2">Students (in number of people)</label>
+            </form>
+            <div>
+                <svg id="stacked-bar-chart"></svg>
+            </div>
         </div>
-        </form>
-        <div>
-            <svg id="stacked-bar-chart"></svg>
-        </div>
+
     </div>    
 </div>
     <audio>
@@ -97,7 +101,6 @@
         //         });                
         //     }                
         // });
-
     });
     function isBlank(str) {
       return (!str || /^\s*$/.test(str));
@@ -120,6 +123,22 @@
     var n, a=[], walk=document.createTreeWalker(el,NodeFilter.SHOW_TEXT,null,false);
     while(n=walk.nextNode()) a.push(n);
     return a;
+}
+
+function national(){
+    document.getElementById("pie").style.display = "block";
+    document.getElementById("regional").style.display = "none";
+    document.getElementById("diagram").style.display = "none";
+}
+function regional(){
+    document.getElementById("pie").style.display = "none";
+    document.getElementById("regional").style.display = "block";
+    document.getElementById("diagram").style.display = "none";
+}
+function state(){
+    document.getElementById("pie").style.display = "none";
+    document.getElementById("regional").style.display = "none";
+    document.getElementById("diagram").style.display = "block";
 }
 </script>
 
